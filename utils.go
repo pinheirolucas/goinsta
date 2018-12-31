@@ -8,11 +8,10 @@ import (
 	_ "image/png"
 	"io"
 	"strconv"
-	"unsafe"
 )
 
 func b2s(b []byte) string {
-	return *(*string)(unsafe.Pointer(&b))
+	return string(b)
 }
 
 func toString(i interface{}) string {
